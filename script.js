@@ -5,12 +5,12 @@ let computerChoice,
     roundAmount;
 
 function chooseRoundAmount() {
-    roundAmount = prompt("Rock, Paper, Scissors Game. Choose round amount: ")
+    roundAmount = prompt("Rock, Paper, Scissors Game. Choose round amount: ");
     return roundAmount;
 }
 
 function getComputerChoice() {
-    randomNumber = Math.floor(Math.random()*3);
+    randomNumber = Math.floor(Math.random() * 3);
 
     if(randomNumber == 0) {
         computerChoice = "Rock";
@@ -102,9 +102,9 @@ function playRound() {
     }
 
     console.log("CURRENT SCORE");
-    console.log("Your score: " + humanScore + " ||| Computer score:" + computerScore);
-    console.log("")
-    
+    console.log("Your score: " + humanScore + " ||| Computer score: " + computerScore);
+    console.log("");
+
     return humanScore, computerScore;
 }
 
@@ -138,5 +138,5 @@ function playGame() {
     getWinner();
 }
 
-alert("Press F12 to see Console Logs");
+alert("Press F12 to see Console");
 playGame();
