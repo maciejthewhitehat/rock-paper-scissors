@@ -4,11 +4,6 @@ let computerChoice,
     computerScore = 0,
     roundAmount;
 
-function chooseRoundAmount() {
-    roundAmount = prompt("Rock, Paper, Scissors Game. Choose round amount: ");
-    return roundAmount;
-}
-
 function getComputerChoice() {
     randomNumber = Math.floor(Math.random() * 3);
 
@@ -44,12 +39,11 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-function playRound() {
-    getComputerChoice();
-    getHumanChoice();
-
+function playRound(humanChoice, computerChoice) {
+    console.log("Computer chose " + computerChoice);
+    console.log("You chose " + computerChoice);
     if(humanChoice == "Rock") {
-        switch(computerChoice) {
+                switch(computerChoice) {
             case "Rock":
                 console.log("Round draw!");
                 break;
@@ -100,9 +94,9 @@ function playRound() {
             }
         }
     }
-
-    console.log("CURRENT SCORE");
-    console.log("Your score: " + humanScore + " ||| Computer score: " + computerScore);
+    console.log("=");
+    console.log("CURRENT SCORE:");
+    console.log("Your score: " + humanScore + " | Computer score: " + computerScore);
     console.log("");
 
     return humanScore, computerScore;
@@ -128,15 +122,14 @@ function getWinner() {
 }
 
 function playGame() {
-    chooseRoundAmount();
-
-    for(i = 1; i <= roundAmount; i++) {
-        console.log("===== ROCK, PAPER, SCISSORS - Round " + i + " =====");
-        playRound();
+    alert("Press F12 to see Console");
+    for(i = 1; i <= 5; i++) {
+        console.log("=== ROUND " + i + " ===");
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
     }
-
     getWinner();
 }
 
-alert("Press F12 to see Console");
 playGame();
