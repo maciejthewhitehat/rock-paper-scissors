@@ -5,10 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/druk-wide-bold" rel="stylesheet">
   </head>
   <body>
-	<script src="script.js"></script>
+    <div class="header">Rock, Paper, Scissors!</div>
+    <div class="line"></div>
+    <div class="gameWindow">
+      <div class="buttonsBox">
+        <button class="choiceButton humanButton rockButton">
+          <img src="images/rock.png" alt="Rock">
+        </button>
+        <button class="choiceButton humanButton paperButton">
+          <img src="images/paper.png" alt="Paper">
+        </button>
+        <button class="choiceButton humanButton scissorsButton">
+          <img src="images/scissors.png" alt="Scissors">
+        </button>
+      </div>
+
+      <div class="gameContainer">
+        <div class="scoreboard">
+          <div class="score">
+            <div class="scoreboardHeader">YOUR SCORE</div>
+            <div class="scoreboardScore" id="currentHumanScore">-</div>
+          </div>
+          <div class="score">
+            <div class="scoreboardHeader">COMPUTER SCORE</div>
+            <div class="scoreboardScore" id="currentComputerScore">-</div>
+          </div>
+        </div>
+
+        <div class="arena">
+          <div class="humanArena"></div>
+          <div class="verticalLine"></div>
+          <div class="computerArena"></div>
+        </div>
+        <div class="roundNumber">Round -</div>
+      </div>
+      <div class="buttonsBox">
+        <button class="choiceButton">
+          <img class="computerImg" src="images/rock.png" alt="Rock">
+        </button>
+        <button class="choiceButton">
+          <img class="computerImg" src="images/paper.png" alt="Paper">
+        </button>
+        <button class="choiceButton">
+          <img class="computerImg" src="images/scissors.png" alt="Scissors">
+        </button>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="footer">
+      <div class="footerCopyright">Copyright © 2024</div>
+      <div class="footerLink">
+        <a href="https://github.com/maciejthewhitehat" target="_blank"> @MaciejTheWhiteHat</a>
+      </div> 
+    </div>
     
+    <div id="overlay" class="overlay hidden">
+      <div class="endGameBox">
+        <div id="message"></div>
+        <button id="playAgainButton">PLAY AGAIN</button>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
   </body>
 </html>
