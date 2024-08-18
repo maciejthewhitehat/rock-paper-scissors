@@ -62,6 +62,7 @@ function playRound(humanChoice, cloneHumanButton) {
     document.querySelector(".humanArena").innerHTML = ""; // remove previous choices
     document.querySelector(".computerArena").innerHTML = "";
     cloneHumanButton.classList.remove("humanButton");
+    cloneComputerButton.classList.remove("humanButton");
     document.querySelector(".humanArena").appendChild(cloneHumanButton); // copy current choice
     document.querySelector(".computerArena").appendChild(cloneComputerButton);
 
